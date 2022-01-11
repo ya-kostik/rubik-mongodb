@@ -1,0 +1,30 @@
+{
+  "name": "rubik-mongodb",
+  "version": "1.0.0",
+  "description": "Kubik for MongoDB NodeJS native Driver",
+  "main": "MongoDB.js",
+  "repository": "https://github.com/ya-kostik/rubik-mongodb.git",
+  "author": "Constantin Tsukanov <c@indotech.ru>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint",
+    "tarball": "tarball=\"$(npm pack .)\"; wc -c \"${tarball}\"; tar tvf \"${tarball}\"; rm \"${tarball}\";",
+    "prepublishOnly": "yarn tarball"
+  },
+  "files": [
+    "MongoDB.js",
+    "default"
+  ],
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "jest": "^27.4.7",
+    "mongodb": "^4.3.0",
+    "mongodb-memory-server": "^8.1.0",
+    "rubik-main": "^2.3.2"
+  },
+  "peerDependencies": {
+    "mongodb": "^4.3.0",
+    "rubik-main": "^2.3.2"
+  }
+}
